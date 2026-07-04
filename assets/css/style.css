@@ -109,6 +109,8 @@ img { max-width: 100%; display: block; }
 
 /* ---------- Buttons ---------- */
 .btn {
+  appearance: none;
+  -webkit-appearance: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -594,4 +596,137 @@ hr.divider {
   border: none;
   border-top: 1px solid var(--color-line);
   margin: 3rem 0;
+}
+
+/* ---------- Process steps (numbered) ---------- */
+.step-list {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+.step__num {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-olive);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+.step h3 { margin-bottom: 0.3em; }
+.step p { color: var(--color-ink-soft); margin: 0; }
+
+/* ---------- Trust grid (checkmark badges) ---------- */
+.trust-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.trust-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.2rem;
+  align-items: start;
+}
+.trust-item__icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-olive);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+.trust-item h3 { margin-bottom: 0.3em; font-size: 1.2rem; }
+.trust-item p { color: var(--color-ink-soft); margin: 0; font-size: 0.95rem; }
+
+/* ---------- Category pill ---------- */
+.pill {
+  display: inline-block;
+  background: var(--color-olive);
+  color: var(--color-white);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  padding: 0.4em 1em;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+/* ---------- Formation / soin card meta ---------- */
+.offer-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.offer-card:hover { transform: translateY(-4px); box-shadow: 0 18px 34px -22px rgba(32,31,26,0.35); }
+.offer-card__visual {
+  aspect-ratio: 4 / 3;
+}
+.offer-card__body {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.offer-card__body p { color: var(--color-ink-soft); font-size: 0.97rem; }
+.offer-card__foot {
+  margin-top: auto;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--color-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.offer-card__foot .price {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--color-olive-dark);
+}
+.offer-card__foot .duration {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Decorative themed visual tiles (no photography assets) */
+.theme-visual {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(155deg, var(--tv-a, #e4ddc8), var(--tv-b, #6f6b45));
+  position: relative;
+}
+.theme-visual::after {
+  content: attr(data-glyph);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 2.6rem;
+  color: rgba(255,255,255,0.8);
 }
