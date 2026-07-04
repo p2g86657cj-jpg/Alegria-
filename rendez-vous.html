@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prendre Rendez-vous — Alégria, Éveil Sacré</title>
+<meta name="description" content="Réservez votre séance de soin chamanique ou énergétique auprès d'Alégria, Éveil Sacré. Consultation en cabinet ou à distance.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="logo">Alégria, <span>Éveil Sacré</span></a>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Soins &amp; Services</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="contact.html">Contact</a>
+      <a href="rendez-vous.html" class="btn btn--primary main-nav__cta">Prendre Rendez-vous</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container reveal">
+      <span class="eyebrow">Réservation</span>
+      <h1>Prendre Rendez-vous</h1>
+      <p class="lede">Remplissez le formulaire ci-dessous pour demander votre séance. Nous vous recontacterons sous 48h afin de confirmer la date et l'heure de votre rendez-vous.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split" style="align-items:start;">
+
+      <div class="reveal">
+        <form class="form" data-static-form novalidate>
+          <div class="form-row form-row--2">
+            <div>
+              <label for="prenom">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
+            </div>
+            <div>
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" required autocomplete="family-name">
+            </div>
+          </div>
+
+          <div class="form-row form-row--2">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div>
+              <label for="telephone">Téléphone</label>
+              <input type="tel" id="telephone" name="telephone" required autocomplete="tel">
+            </div>
+          </div>
+
+          <div>
+            <label for="soin">Type de soin souhaité</label>
+            <select id="soin" name="soin" required>
+              <option value="" disabled selected>Choisissez un soin</option>
+              <option value="soin-chamanique-traditionnel">Soin Chamanique Traditionnel</option>
+              <option value="voyage-chamanique-retour-d-ame">Voyage Chamanique &amp; Retour d'Âme</option>
+              <option value="nettoyage-energetique-de-lieu">Nettoyage Énergétique de Lieu</option>
+              <option value="soin-aux-cristaux">Soin aux Cristaux</option>
+              <option value="lecture-de-guidance-oracle">Lecture de Guidance &amp; Oracle</option>
+              <option value="rituel-de-purification">Rituel de Purification</option>
+              <option value="consultation-a-distance">Consultation à Distance</option>
+              <option value="autre">Autre / je ne sais pas encore</option>
+            </select>
+          </div>
+
+          <div class="form-row form-row--2">
+            <div>
+              <label for="date">Date souhaitée</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div>
+              <label for="heure">Créneau souhaité</label>
+              <select id="heure" name="heure" required>
+                <option value="" disabled selected>Choisissez un créneau</option>
+                <option value="matin">Matin (9h – 12h)</option>
+                <option value="apres-midi">Après-midi (13h – 17h)</option>
+                <option value="soir">Soir (17h – 20h)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="modalite">Modalité</label>
+            <select id="modalite" name="modalite" required>
+              <option value="" disabled selected>Choisissez une modalité</option>
+              <option value="cabinet">En cabinet</option>
+              <option value="distance">À distance (visioconférence)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Message (facultatif)</label>
+            <textarea id="message" name="message" placeholder="Partagez-nous votre intention ou toute information utile avant votre séance."></textarea>
+          </div>
+
+          <p class="form-note">En soumettant ce formulaire, vous acceptez d'être recontacté(e) par Alégria, Éveil Sacré pour confirmer votre rendez-vous.</p>
+
+          <button type="submit" class="btn btn--primary btn--full">Envoyer ma demande de rendez-vous</button>
+        </form>
+
+        <div class="form-success">
+          <p>✦ Merci pour votre confiance !</p>
+          <p style="font-size:1rem; font-family: var(--font-body);">Votre demande de rendez-vous a bien été enregistrée. Nous vous recontacterons sous 48h pour confirmer votre séance.</p>
+        </div>
+      </div>
+
+      <aside class="info-box reveal">
+        <h3>Avant votre séance</h3>
+        <ul class="check-list">
+          <li>Prévoyez une tenue confortable et un temps calme après la séance.</li>
+          <li>Évitez toute consommation d'alcool 24h avant le rendez-vous.</li>
+          <li>Venez avec une intention ou une question, si vous le souhaitez.</li>
+        </ul>
+
+        <dl>
+          <dt>Horaires</dt>
+          <dd>Du mardi au samedi, 9h – 20h</dd>
+          <dt>Lieu</dt>
+          <dd>En cabinet ou à distance, sur rendez-vous</dd>
+          <dt>Annulation</dt>
+          <dd>Merci de prévenir au moins 24h à l'avance</dd>
+        </dl>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">Alégria, Éveil Sacré</div>
+        <p class="mt-2">Votre centre de bien-être spirituel. Nous vous accompagnons dans votre développement personnel à travers des soins ancestraux et des pratiques énergétiques.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="services.html">Soins &amp; Services</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="rendez-vous.html">Rendez-vous</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@alegria-eveilsacre.fr">contact@alegria-eveilsacre.fr</a></li>
+          <li><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
+          <li>Sur rendez-vous — en cabinet ou à distance</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Alégria, Éveil Sacré. Tous droits réservés.</span>
+      <span>Site conçu avec soin.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
