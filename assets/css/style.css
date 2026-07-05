@@ -22,6 +22,8 @@
   --color-indigo: #8a8ed4;
   --color-indigo-light: #aab0e6;
   --color-sky: #7cc0da;
+  --color-mauve: #b07fc4;
+  --color-mauve-light: #cda3dc;
 
   --color-line: rgba(154, 158, 219, 0.18);
   --color-line-strong: rgba(154, 158, 219, 0.4);
@@ -382,6 +384,20 @@ body.nav-lock { overflow: hidden; }
 }
 .visual-orb:has(.visual-orb__mark)::after { content: none; }
 
+.visual-orb--mauve {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(176,127,196,0.3), transparent 60%),
+    radial-gradient(circle at 50% 50%, #1e1720 0%, var(--color-black) 78%);
+}
+.visual-orb--mauve::before { border-color: rgba(176,127,196,0.4); }
+.visual-orb--mauve::after { color: var(--color-mauve-light); }
+
+/* ---------- Doula theme accents ---------- */
+.text-mauve { color: var(--color-mauve-light); }
+.pill--mauve { border-color: var(--color-mauve); color: var(--color-mauve-light); }
+.card--doula:hover, .offer-card--doula:hover { border-color: var(--color-mauve); }
+.card--doula .card__icon, .offer-card--doula .price { color: var(--color-mauve-light); }
+
 /* ---------- Cards / grids ---------- */
 .grid {
   display: grid;
@@ -467,6 +483,12 @@ body.nav-lock { overflow: hidden; }
   color: var(--color-gold-light);
   opacity: 0.9;
 }
+.tile-visual--mauve, .theme-visual--mauve {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(176,127,196,0.24), transparent 60%),
+    linear-gradient(165deg, #201420 0%, var(--color-black) 100%);
+}
+.tile-visual--mauve::after, .theme-visual--mauve::after { color: var(--color-mauve-light); }
 
 /* ---------- List / checkmarks ---------- */
 .check-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
@@ -500,6 +522,7 @@ body.nav-lock { overflow: hidden; }
 /* ---------- Split section ---------- */
 .split {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 2.5rem;
   align-items: center;
 }
@@ -515,10 +538,12 @@ body.nav-lock { overflow: hidden; }
 /* ---------- Forms ---------- */
 .form {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.4rem;
 }
 .form-row {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.4rem;
 }
 @media (min-width: 640px) {
@@ -536,6 +561,7 @@ label {
 
 input, select, textarea {
   width: 100%;
+  min-width: 0;
   font-family: var(--font-body);
   font-size: 1rem;
   padding: 0.85em 1em;
@@ -568,7 +594,7 @@ textarea { resize: vertical; min-height: 120px; }
   color: var(--color-gold-light);
 }
 .form-success.is-visible { display: block; }
-.form.is-hidden { display: none; }
+.form.is-hidden, .newsletter-row.is-hidden { display: none; }
 
 /* ---------- Info box (sidebar on booking / contact page) ---------- */
 .info-box {
@@ -651,6 +677,37 @@ textarea { resize: vertical; min-height: 120px; }
   justify-content: space-between;
 }
 .footer-bottom a:hover { color: var(--color-gold-light); }
+
+.newsletter {
+  margin-top: 1.6rem;
+}
+.newsletter h4 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.9rem;
+}
+.newsletter-row {
+  display: flex;
+  gap: 0.7rem;
+  max-width: 380px;
+}
+.newsletter-row input {
+  flex: 1;
+  min-width: 0;
+}
+.newsletter-row .btn { flex-shrink: 0; }
+.newsletter .form-note { margin-top: 0.8rem; margin-bottom: 0; }
+.newsletter .form-success {
+  margin-top: 0.8rem;
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+  text-align: left;
+  max-width: 380px;
+}
 
 /* ---------- Utility ---------- */
 .mt-2 { margin-top: 2rem; }
@@ -793,7 +850,15 @@ hr.divider {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
+.offer-card__foot--stack {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.9rem;
+}
+.offer-card__foot--stack .duration { text-align: center; }
+.offer-card__foot--stack .btn { width: 100%; }
 .offer-card__foot .price {
   font-family: var(--font-display);
   font-size: 1.3rem;
