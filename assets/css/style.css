@@ -19,14 +19,15 @@
   --color-gold-dark: #a1854f;
   --color-gold-light: #e2c88f;
 
-  --color-indigo: #8a8ed4;
-  --color-indigo-light: #aab0e6;
-  --color-sky: #7cc0da;
-  --color-mauve: #b07fc4;
-  --color-mauve-light: #cda3dc;
+  --color-indigo: #2a86ac;
+  --color-indigo-light: #6bc0dc;
+  --color-navy: #0e3869;
+  --color-sky: #5fc9e0;
+  --color-mauve: #9c4f78;
+  --color-mauve-light: #c98aab;
 
-  --color-line: rgba(154, 158, 219, 0.18);
-  --color-line-strong: rgba(154, 158, 219, 0.4);
+  --color-line: rgba(42, 134, 172, 0.18);
+  --color-line-strong: rgba(42, 134, 172, 0.4);
   --color-border-ivory: rgba(235, 232, 242, 0.26);
 
   --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
@@ -45,7 +46,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   background:
-    radial-gradient(ellipse 1100px 650px at 18% -8%, rgba(138,142,212,0.09), transparent 60%),
+    radial-gradient(ellipse 1100px 650px at 18% -8%, rgba(42,134,172,0.09), transparent 60%),
     radial-gradient(ellipse 900px 600px at 100% 10%, rgba(201,171,111,0.06), transparent 55%),
     var(--color-bg);
   color: var(--color-ink);
@@ -348,7 +349,7 @@ body.nav-lock { overflow: hidden; }
   position: relative;
   border: 1px solid var(--color-line);
   background:
-    radial-gradient(circle at 50% 42%, rgba(138,142,212,0.28), transparent 60%),
+    radial-gradient(circle at 50% 42%, rgba(42,134,172,0.28), transparent 60%),
     radial-gradient(circle at 50% 50%, #1a1826 0%, var(--color-black) 78%);
 }
 .visual-orb::before {
@@ -380,17 +381,18 @@ body.nav-lock { overflow: hidden; }
 .visual-orb__mark img {
   width: 62%;
   height: auto;
-  filter: drop-shadow(0 0 24px rgba(138,142,212,0.35));
+  filter: drop-shadow(0 0 24px rgba(42,134,172,0.35));
 }
 .visual-orb:has(.visual-orb__mark)::after { content: none; }
 
 .visual-orb--mauve {
   background:
-    radial-gradient(circle at 50% 42%, rgba(176,127,196,0.3), transparent 60%),
+    radial-gradient(circle at 50% 42%, rgba(156,79,120,0.3), transparent 60%),
     radial-gradient(circle at 50% 50%, #1e1720 0%, var(--color-black) 78%);
 }
-.visual-orb--mauve::before { border-color: rgba(176,127,196,0.4); }
+.visual-orb--mauve::before { border-color: rgba(156,79,120,0.4); }
 .visual-orb--mauve::after { color: var(--color-mauve-light); }
+.visual-orb--mauve .visual-orb__mark img { filter: drop-shadow(0 0 24px rgba(156,79,120,0.4)); }
 
 /* ---------- Doula theme accents ---------- */
 .text-mauve { color: var(--color-mauve-light); }
@@ -485,7 +487,7 @@ body.nav-lock { overflow: hidden; }
 }
 .tile-visual--mauve, .theme-visual--mauve {
   background:
-    radial-gradient(circle at 50% 38%, rgba(176,127,196,0.24), transparent 60%),
+    radial-gradient(circle at 50% 38%, rgba(156,79,120,0.24), transparent 60%),
     linear-gradient(165deg, #201420 0%, var(--color-black) 100%);
 }
 .tile-visual--mauve::after, .theme-visual--mauve::after { color: var(--color-mauve-light); }
